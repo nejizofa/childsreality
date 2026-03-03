@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, Phone, Mail } from "lucide-react";
 import { NAV_LINKS, OFFICE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/ui/Logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -43,7 +43,14 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border">
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center">
-            <Logo className="h-10 md:h-12" />
+            <Image
+              src="/images/logo.png"
+              alt="Childs Real Estate"
+              width={160}
+              height={48}
+              className="h-12 md:h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -77,7 +84,13 @@ export function Header() {
             <SheetContent side="right" className="w-80 p-0">
               <div className="flex flex-col h-full">
                 <div className="p-6 border-b border-border">
-                  <Logo className="h-9" />
+                  <Image
+                    src="/images/logo.png"
+                    alt="Childs Real Estate"
+                    width={140}
+                    height={42}
+                    className="h-9 w-auto"
+                  />
                 </div>
                 <nav className="flex-1 p-6 space-y-1">
                   {NAV_LINKS.map((link) => (
