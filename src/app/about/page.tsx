@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -181,13 +182,26 @@ export default function AboutPage() {
               >
                 <CardContent className="p-8">
                   <div className="flex flex-col sm:flex-row gap-6">
-                    {/* Initials Avatar */}
+                    {/* Photo / Initials Avatar */}
                     <div className="flex-shrink-0 mx-auto sm:mx-0">
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                        <span className="text-2xl font-heading font-semibold text-white">
-                          {getInitials(member.name)}
-                        </span>
-                      </div>
+                      {member.image && !member.image.endsWith(".svg") ? (
+                        <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg ring-2 ring-accent/20">
+                          <Image
+                            src={member.image}
+                            alt={member.name}
+                            width={96}
+                            height={96}
+                            className="w-full h-full object-cover"
+                            style={{ objectPosition: (member as { imagePosition?: string }).imagePosition ?? "center" }}
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                          <span className="text-2xl font-heading font-semibold text-white">
+                            {getInitials(member.name)}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Info */}

@@ -41,14 +41,14 @@ export function Header() {
 
       {/* Main nav */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16 md:h-20">
+        <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-20 md:h-24">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="Childs Real Estate"
-              width={160}
-              height={48}
-              className="h-12 md:h-14 w-auto"
+              width={220}
+              height={72}
+              className="h-16 md:h-20 w-auto"
               priority
             />
           </Link>

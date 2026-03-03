@@ -19,7 +19,8 @@ export const TEAM = [
     phone: "(801) 735-8460",
     email: "ammonchilds@gmail.com",
     bio: "With over 15 years of experience in Utah real estate, Ammon brings deep market knowledge and a commitment to exceptional client service. As broker and owner, he leads the Childs Real Estate team with integrity and results-driven strategies.",
-    image: "/images/team/ammon.svg",
+    image: "/images/team/ammon.jpg",
+    imagePosition: "top",
     social: {
       instagram: "https://instagram.com/childsrealestate",
       facebook: "https://facebook.com/childsrealestate",
@@ -30,9 +31,9 @@ export const TEAM = [
     name: "Tasha Childs",
     title: "Realtor / Co-Owner",
     phone: "(801) 602-8856",
-    email: "ammonchilds@gmail.com",
+    email: "tashalchilds@gmail.com",
     bio: "Tasha is passionate about helping families find their dream homes throughout Utah County. Her attention to detail, design eye, and warm approach make the buying and selling process seamless and enjoyable.",
-    image: "/images/team/tasha.svg",
+    image: "/images/team/tasha.jpg",
     social: {
       instagram: "https://instagram.com/childsrealestate",
       facebook: "https://facebook.com/childsrealestate",
