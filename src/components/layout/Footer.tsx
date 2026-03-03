@@ -6,11 +6,11 @@ import { ChevronDown, ChevronUp, Phone, Mail, MapPin } from "lucide-react";
 import {
   NAV_LINKS,
   OFFICE,
-  SITE_NAME,
   MLS_DISCLAIMER,
   BHHS_DISCLAIMER,
   FEATURED_AREAS,
 } from "@/lib/constants";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   const [mlsExpanded, setMlsExpanded] = useState(false);
@@ -22,9 +22,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-heading text-2xl font-bold text-white">
-              {SITE_NAME}
-            </h3>
+            <Logo variant="light" className="h-10" />
             <p className="text-white/70 text-sm leading-relaxed">
               {OFFICE.name}
             </p>

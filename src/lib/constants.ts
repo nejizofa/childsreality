@@ -5,19 +5,19 @@ export const SITE_URL = "https://childsrealestate.com";
 
 export const OFFICE = {
   name: "Berkshire Hathaway HomeServices Elite Real Estate",
-  address: "489 W 200 S, Springville, UT 84663",
-  phone: "(801) 400-8618",
-  email: "info@childsrealestate.com",
-  lat: 40.1641,
-  lng: -111.6148,
+  address: "825 E 1180 S 300, American Fork, UT 84003",
+  phone: "(801) 735-8460",
+  email: "ammonchilds@gmail.com",
+  lat: 40.3766,
+  lng: -111.7465,
 };
 
 export const TEAM = [
   {
     name: "Ammon Childs",
     title: "Broker / Owner",
-    phone: "(801) 400-8618",
-    email: "ammon@childsrealestate.com",
+    phone: "(801) 735-8460",
+    email: "ammonchilds@gmail.com",
     bio: "With over 15 years of experience in Utah real estate, Ammon brings deep market knowledge and a commitment to exceptional client service. As broker and owner, he leads the Childs Real Estate team with integrity and results-driven strategies.",
     image: "/images/team/ammon.svg",
     social: {
@@ -29,8 +29,8 @@ export const TEAM = [
   {
     name: "Tasha Childs",
     title: "Realtor / Co-Owner",
-    phone: "(801) 400-8618",
-    email: "tasha@childsrealestate.com",
+    phone: "(801) 602-8856",
+    email: "ammonchilds@gmail.com",
     bio: "Tasha is passionate about helping families find their dream homes throughout Utah County. Her attention to detail, design eye, and warm approach make the buying and selling process seamless and enjoyable.",
     image: "/images/team/tasha.svg",
     social: {
