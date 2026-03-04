@@ -47,6 +47,8 @@ const RESOURCES = [
     icon: PackageCheck,
     category: "Planning",
     readTime: "6 min read",
+    href: "/resources/moving-checklist",
+    isLive: true,
   },
   {
     title: "Utah Market Update",
@@ -55,6 +57,8 @@ const RESOURCES = [
     icon: TrendingUp,
     category: "Market",
     readTime: "5 min read",
+    href: "/resources/utah-market-update",
+    isLive: true,
   },
   {
     title: "First-Time Buyer Programs",
@@ -63,6 +67,8 @@ const RESOURCES = [
     icon: Key,
     category: "Buyers",
     readTime: "10 min read",
+    href: "/resources/first-time-buyers",
+    isLive: true,
   },
   {
     title: "Investment Properties 101",

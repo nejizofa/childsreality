@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, ArrowRight } from "lucide-react";
 import { TEAM } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
@@ -37,11 +38,23 @@ export function TeamPreview() {
               key={member.name}
               className="group bg-white border border-border rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition-all duration-300"
             >
-              {/* Avatar circle with initials */}
-              <div className="mx-auto mb-6 w-28 h-28 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                <span className="text-3xl font-heading text-white font-semibold">
-                  {getInitials(member.name)}
-                </span>
+              {/* Avatar */}
+              <div className="mx-auto mb-6 w-28 h-28 rounded-full overflow-hidden shadow-lg">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-cover object-top"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                    <span className="text-3xl font-heading text-white font-semibold">
+                      {getInitials(member.name)}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Name and title */}

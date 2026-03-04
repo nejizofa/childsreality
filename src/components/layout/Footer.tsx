@@ -73,6 +73,22 @@ export function Footer() {
               Service Areas
             </h4>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/properties?county=Utah+County"
+                  className="text-white/70 hover:text-accent transition-colors font-medium"
+                >
+                  Utah County
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/properties?county=Salt+Lake+County"
+                  className="text-white/70 hover:text-accent transition-colors font-medium"
+                >
+                  Salt Lake County
+                </Link>
+              </li>
               {FEATURED_AREAS.map((area) => (
                 <li key={area.slug}>
                   <Link
@@ -80,6 +96,25 @@ export function Footer() {
                     className="text-white/70 hover:text-accent transition-colors"
                   >
                     {area.name}
+                  </Link>
+                </li>
+              ))}
+              {[
+                "Provo",
+                "Draper",
+                "Sandy",
+                "South Jordan",
+                "Saratoga Springs",
+                "Eagle Mountain",
+                "Pleasant Grove",
+                "Springville",
+              ].map((city) => (
+                <li key={city}>
+                  <Link
+                    href={`/properties?city=${encodeURIComponent(city)}`}
+                    className="text-white/70 hover:text-accent transition-colors"
+                  >
+                    {city}
                   </Link>
                 </li>
               ))}

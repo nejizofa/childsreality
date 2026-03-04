@@ -164,3 +164,9 @@ export const MLS_DISCLAIMER =
 
 export const BHHS_DISCLAIMER =
   "© 2026 BHH Affiliates, LLC. An independently owned and operated franchisee of BHH Affiliates, LLC. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of Columbia Insurance Company, a Berkshire Hathaway affiliate. Equal Housing Opportunity.";
+
+export const FAIR_HOUSING_STATEMENT =
+  "We are pledged to the letter and spirit of U.S. policy for the achievement of equal housing opportunity throughout the nation. We encourage and support an affirmative advertising and marketing program in which there are no barriers to obtaining housing because of race, color, religion, sex, handicap, familial status, or national origin. " +
+  "The Fair Housing Act prohibits discrimination in the sale, rental, and financing of housing based on race, color, national origin, religion, sex, familial status (including children under the age of 18 living with parents or legal custodians, pregnant women, and people securing custody of children under the age of 18), and handicap (disability). " +
+  "In addition to federal protections, the State of Utah prohibits discrimination in housing based on source of income, sexual orientation, and gender identity. " +
+  "If you believe you have been discriminated against in the sale, rental, or financing of a home, you may contact the U.S. Department of Housing and Urban Development (HUD) at 1-800-669-9777 or file a complaint at hud.gov/fairhousing.";
