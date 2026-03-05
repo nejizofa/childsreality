@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Phone, Mail, MapPin } from "lucide-react";
 import {
@@ -10,7 +11,6 @@ import {
   BHHS_DISCLAIMER,
   FEATURED_AREAS,
 } from "@/lib/constants";
-import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   const [mlsExpanded, setMlsExpanded] = useState(false);
@@ -22,7 +22,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <Logo variant="light" className="h-10" />
+            <Image
+              src="/images/logo.png"
+              alt="Childs Real Estate"
+              width={480}
+              height={180}
+              className="w-56 h-auto rounded-lg"
+            />
             <p className="text-white/70 text-sm leading-relaxed">
               {OFFICE.name}
             </p>

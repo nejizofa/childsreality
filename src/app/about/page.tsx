@@ -63,12 +63,14 @@ export default function AboutPage() {
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-12 bg-accent/60" />
-            <span className="text-accent text-sm font-medium tracking-[0.2em] uppercase">
-              Our Story
-            </span>
-            <div className="h-px w-12 bg-accent/60" />
+          <div className="flex items-center justify-center mb-6">
+            <Image
+              src="/images/logo.png"
+              alt="Childs Real Estate Logo"
+              width={480}
+              height={180}
+              className="h-16 w-auto rounded-lg"
+            />
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white leading-[1.1] mb-6">
             About {SITE_NAME}

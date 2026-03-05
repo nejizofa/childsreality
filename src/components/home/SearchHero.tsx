@@ -132,16 +132,16 @@ export function SearchHero() {
               500+
             </p>
             <p className="text-xs md:text-sm uppercase tracking-wider mt-1">
-              Properties
+              Properties Sold
             </p>
           </div>
           <div className="h-8 w-px bg-white/20" />
           <div className="text-center">
             <p className="text-2xl md:text-3xl font-heading text-white font-semibold">
-              15+
+              26+
             </p>
             <p className="text-xs md:text-sm uppercase tracking-wider mt-1">
-              Years Experience
+              Combined Years Experience
             </p>
           </div>
           <div className="h-8 w-px bg-white/20" />

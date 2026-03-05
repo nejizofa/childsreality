@@ -46,9 +46,9 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt="Childs Real Estate"
-              width={220}
-              height={72}
-              className="h-16 md:h-20 w-auto"
+              width={480}
+              height={180}
+              className="h-14 md:h-16 w-auto"
               priority
             />
           </Link>

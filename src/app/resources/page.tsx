@@ -8,6 +8,7 @@ import {
   Key,
   Building2,
   ArrowRight,
+  Home,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -78,6 +79,16 @@ const RESOURCES = [
     category: "Investing",
     readTime: "15 min read",
     href: "/resources/investment-properties",
+    isLive: true,
+  },
+  {
+    title: "Home Selling Guide",
+    description:
+      "21 proven ways to prepare and sell your home for top dollar in Utah. From decluttering and staging to pricing strategy, offers, and closing day.",
+    icon: Home,
+    category: "Sellers",
+    readTime: "10 min read",
+    href: "/resources/home-selling-guide",
     isLive: true,
   },
 ];
