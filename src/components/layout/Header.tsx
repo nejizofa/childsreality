@@ -59,6 +59,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className={cn(
                   "px-4 py-2 rounded-md text-sm font-medium transition-colors",
                   pathname === link.href
@@ -97,6 +98,7 @@ export function Header() {
                     <SheetClose asChild key={link.href}>
                       <Link
                         href={link.href}
+                        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                         className={cn(
                           "block px-4 py-3 rounded-md text-base font-medium transition-colors",
                           pathname === link.href
