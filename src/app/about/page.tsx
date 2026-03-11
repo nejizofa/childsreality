@@ -64,15 +64,14 @@ export default function AboutPage() {
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center mb-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3">
-              <Image
-                src="/images/logo.png"
-                alt="Childs Real Estate Logo"
-                width={480}
-                height={180}
-                className="h-16 w-auto"
-              />
-            </div>
+            <Image
+              src="/images/logo-transparent.png"
+              alt="Childs Real Estate Logo"
+              width={480}
+              height={180}
+              className="h-16 w-auto"
+              style={{ filter: "invert(1) hue-rotate(180deg)" }}
+            />
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white leading-[1.1] mb-6">
             About {SITE_NAME}
