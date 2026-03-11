@@ -34,6 +34,7 @@ export const TEAM = [
     email: "tashalchilds@gmail.com",
     bio: "Tasha is passionate about helping families find their dream homes throughout Utah County. Her attention to detail, design eye, and warm approach make the buying and selling process seamless and enjoyable.",
     image: "/images/team/tasha.jpg",
+    objectPosition: "50% 15%",
     social: {
       instagram: "https://instagram.com/childsrealestate",
       facebook: "https://facebook.com/childsrealestate",
@@ -137,7 +138,7 @@ export const TESTIMONIALS = [
   {
     name: "Julia Brady",
     location: "Google Review",
-    text: "The Child's team is very Professional, responsive, and knowledgeable. They made the entire process smooth and stress-free. Highly recommend",
+    text: "The Childs team is very Professional, responsive, and knowledgeable. They made the entire process smooth and stress-free. Highly recommend",
     rating: 5,
   },
   {

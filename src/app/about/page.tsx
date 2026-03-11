@@ -64,13 +64,15 @@ export default function AboutPage() {
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center mb-6">
-            <Image
-              src="/images/logo.png"
-              alt="Childs Real Estate Logo"
-              width={480}
-              height={180}
-              className="h-16 w-auto rounded-lg"
-            />
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3">
+              <Image
+                src="/images/logo.png"
+                alt="Childs Real Estate Logo"
+                width={480}
+                height={180}
+                className="h-16 w-auto"
+              />
+            </div>
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white leading-[1.1] mb-6">
             About {SITE_NAME}
@@ -196,15 +198,114 @@ export default function AboutPage() {
             </p>
           </div>
 
+          {/* Founders — Ammon & Tasha */}
+          <Card className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow mb-8">
+            <CardContent className="p-0">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-2/5 min-h-[300px] md:min-h-[480px] relative overflow-hidden">
+                  <Image
+                    src="/images/team/ammon-tasha.jpg"
+                    alt="Ammon & Tasha Childs"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+                  <h3 className="font-heading text-2xl font-semibold text-primary">
+                    Ammon &amp; Tasha Childs
+                  </h3>
+                  <p className="text-accent font-medium text-sm mt-1">
+                    Broker / Owner &amp; Realtor / Co-Owner
+                  </p>
+                  <div className="text-muted-foreground text-sm leading-relaxed mt-4 space-y-3">
+                    <p>
+                      Ammon and Tasha Childs have spent over 15 years building
+                      something rare in real estate — a partnership that is
+                      equal parts professional excellence and genuine care.
+                      Together, they founded Childs Real Estate on a simple
+                      belief: that buying or selling a home should be one of
+                      life&apos;s most rewarding experiences.
+                    </p>
+                    <p>
+                      Ammon brings deep market knowledge, sharp negotiation
+                      skills, and a results-driven approach honed over a decade
+                      and a half of Utah real estate. Tasha complements that
+                      with an eye for design, an instinct for what families
+                      truly need, and a warmth that makes every client feel like
+                      a priority — not a transaction.
+                    </p>
+                    <p>
+                      Whether you&apos;re buying your first home, upsizing,
+                      downsizing, or selling, Ammon and Tasha show up as a
+                      team — informed, invested, and in your corner every step
+                      of the way.
+                    </p>
+                  </div>
+                  <div className="mt-5 flex flex-col sm:flex-row gap-4">
+                    <div className="space-y-2">
+                      <a
+                        href="tel:(801) 735-8460"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Phone className="h-3.5 w-3.5 text-accent" />
+                        Ammon: (801) 735-8460
+                      </a>
+                      <a
+                        href="mailto:ammonchilds@gmail.com"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Mail className="h-3.5 w-3.5 text-accent" />
+                        ammonchilds@gmail.com
+                      </a>
+                    </div>
+                    <div className="space-y-2">
+                      <a
+                        href="tel:(801) 602-8856"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Phone className="h-3.5 w-3.5 text-accent" />
+                        Tasha: (801) 602-8856
+                      </a>
+                      <a
+                        href="mailto:tashalchilds@gmail.com"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Mail className="h-3.5 w-3.5 text-accent" />
+                        tashalchilds@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 mt-5">
+                    {[
+                      ["instagram", "https://instagram.com/childsrealestate"],
+                      ["facebook", "https://facebook.com/childsrealestate"],
+                      ["linkedin", "https://linkedin.com/in/ammonchilds"],
+                    ].map(([platform, url]) => (
+                      <a
+                        key={platform}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-colors"
+                      >
+                        {getSocialIcon(platform)}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Rest of the team */}
           <div className="grid md:grid-cols-2 gap-8">
-            {TEAM.map((member) => (
+            {TEAM.slice(2).map((member) => (
               <Card
                 key={member.name}
                 className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow"
               >
                 <CardContent className="p-8">
                   <div className="flex flex-col sm:flex-row gap-6">
-                    {/* Photo / Initials Avatar */}
                     <div className="flex-shrink-0 mx-auto sm:mx-0">
                       {member.image && !member.image.endsWith(".svg") ? (
                         <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg ring-2 ring-accent/20">
@@ -225,8 +326,6 @@ export default function AboutPage() {
                         </div>
                       )}
                     </div>
-
-                    {/* Info */}
                     <div className="flex-1 text-center sm:text-left">
                       <h3 className="font-heading text-xl font-semibold text-primary">
                         {member.name}
@@ -237,8 +336,6 @@ export default function AboutPage() {
                       <p className="text-muted-foreground text-sm leading-relaxed mt-3">
                         {member.bio}
                       </p>
-
-                      {/* Contact */}
                       <div className="mt-4 space-y-2">
                         <a
                           href={`tel:${member.phone}`}
@@ -255,8 +352,6 @@ export default function AboutPage() {
                           {member.email}
                         </a>
                       </div>
-
-                      {/* Social */}
                       {member.social && (
                         <div className="flex items-center justify-center sm:justify-start gap-2 mt-4">
                           {Object.entries(member.social).map(
